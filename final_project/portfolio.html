@@ -5,17 +5,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page 2 - Portfolio</title>
+    <link rel="stylesheet" href="./css/html5reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Page 1 - Index</title>
 </head>
 
 <body>
-
     <header>
         <nav>
             <div class="skip"><a href="#main">Skip to Main Content</a></div>
-            <a href="./index.html">Homepage</a>
-            <a href="./portfolio.html">Portfolio</a>
-            <a href="./contactme.html">Contact me</a>
+            <div class="topNav">
+                <span id="logo">LOGO</span>
+                <span id="burger" onclick="openNav()">&#9776;</span>
+                <div id="myNav" class="overlay">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#x2715;</a>
+                    <div class="overlayContent">
+                        <a href="./index.html">Homepage</a>
+                        <a href="./portfolio.html">Portfolio</a>
+                        <a href="./contactme.html">Contact me</a>
+                    </div>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -26,23 +36,39 @@
         <p>Portfolio / Gallery page with more images</p>
         <div>
             <h2>Architecture</h2>
-            <img src="./img/arch_4.jpg" alt="Sample Architecture 4" height="300">
-            <img src="./img/arch_5.jpg" alt="Sample Architecture 5" height="300">
-            <img src="./img/arch_6.jpg" alt="Sample Architecture 6" height="300">
-            <img src="./img/arch_7.jpg" alt="Sample Architecture 7" height="300">
+            <div id="port_arch">
+                <img id="arch_1" src="./img/arch_4.jpg" alt="Sample Architecture 4">
+                <img id="arch_2" src="./img/arch_5.jpg" alt="Sample Architecture 5">
+                <img id="arch_3" src="./img/arch_6.jpg" alt="Sample Architecture 6">
+                <img id="arch_4" src="./img/arch_7.jpg" alt="Sample Architecture 7">
+            </div>
         </div>
         <div>
             <h2>Automotive</h2>
-            <img src="./img/car_6.jpg" alt="Sample Car 6" height="300">
-            <img src="./img/car_7.jpg" alt="Sample Car 6" height="300">
-            <img src="./img/car_8.jpg" alt="Sample Car 6" height="300">
+            <div id="port_auto">
+                <img id="auto_1" src="./img/car_6.jpg" alt="Sample Car 6" height="300">
+                <img id="auto_2" src="./img/car_7.jpg" alt="Sample Car 6" height="300">
+                <img id="auto_3" src="./img/car_8.jpg" alt="Sample Car 6" height="300">
+            </div>
         </div>
         <div>
             <h2>Portraits</h2>
-            <img src="./img/port_2.jpg" alt="Sample Portrait 2" height="300">
-            <img src="./img/port_3.jpg" alt="Sample Portrait 3" height="300">
+            <div id="port_port">
+                <img id="port_1" src="./img/port_2.jpg" alt="Sample Portrait 2" height="300">
+                <img id="port_2" src="./img/port_3.jpg" alt="Sample Portrait 3" height="300">
+            </div>
         </div>
     </main>
+
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.height = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.height = "0%";
+        }
+    </script>
 
 </body>
 

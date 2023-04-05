@@ -5,44 +5,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/html5reset.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Page 1 - Index</title>
 </head>
 
 <body>
-
     <header>
         <nav>
             <div class="skip"><a href="#main">Skip to Main Content</a></div>
-            <a href="./index.html">Homepage</a>
-            <a href="./portfolio.html">Portfolio</a>
-            <a href="./contactme.html">Contact me</a>
+            <div class="topNav">
+                <span id="logo">LOGO</span>
+                <span id="burger" onclick="openNav()">&#9776;</span>
+                <div id="myNav" class="overlay">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#x2715;</a>
+                    <div class="overlayContent">
+                        <a href="./index.html">Homepage</a>
+                        <a href="./portfolio.html">Portfolio</a>
+                        <a href="./contactme.html">Contact me</a>
+                    </div>
+                </div>
+            </div>
         </nav>
     </header>
 
     <main id="main">
         <h1>Homepage</h1>
+        <!--
         <p>page 1</p>
         <p>Main page, including about, few sample pictures</p>
+        -->
+        <p>Welcome to my personal website! My name is Jan Duspeva, and I am a photographer with a focus on automotive, travel/architecture, 
+        and portrait photography. With a keen eye for detail and a passion for capturing stunning imagery, I specialize in these three areas 
+        to create timeless and impactful images. Whether it's capturing the beauty of a classic car, the grandeur of a cityscape, 
+        or the intimate moments of a portrait session, I strive to bring out the essence of my subjects and tell their unique stories 
+        through my lens. </p>
         <div>
             <h2>Architecture</h2>
-            <img src="./img/arch_1.jpg" alt="Sample Architecture 1 - Budapest church" height="300">
-            <img src="./img/arch_2.jpg" alt="Sample Architecture 2 - Department store in Venice" height="300">
-            <img src="./img/arch_3.jpg" alt="Sample Architecture 3 - Venice" height="300">
+            <div id="hp_arch">
+                <img id="arch1" src="./img/arch_1.jpg" alt="Sample Architecture 1 - Budapest church">
+                <img id="arch2" src="./img/arch_2.jpg" alt="Sample Architecture 2 - Department store in Venice">
+                <img id="arch3" src="./img/arch_3.jpg" alt="Sample Architecture 3 - Venice">
+            </div>
         </div>
         <div>
             <h2>Automotive</h2>
-            <img src="./img/car_2.jpg" alt="Sample Car 2 - Lamborghini Hura" height="300">
-            <img src="./img/car_1.jpg" alt="Sample Car 1" height="300">
-            <img src="./img/car_3.jpg" alt="Sample Car 3" height="300">
-            <img src="./img/car_4.jpg" alt="Sample Car 4" height="300">
-            <img src="./img/car_5.jpg" alt="Sample Car 5" height="300">
+            <div id="hp_auto">
+                <img src="./img/car_2.jpg" alt="Sample Car 2 - Lamborghini Hura">
+                <img src="./img/car_5.jpg" alt="Sample Car 5">
+                <img src="./img/car_1.jpg" alt="Sample Car 1">
+                <img src="./img/car_3.jpg" alt="Sample Car 3">
+                <img src="./img/car_4.jpg" alt="Sample Car 4">
+            </div>
         </div>
         <div>
             <h2>Portraits</h2>
+            <div id="hp_port">
             <img src="./img/port_1.jpg" alt="Sample Portrait 1" height="300">
+        </div>
         </div>
     </main>
 
-</body>
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.height = "100%";
+        }
 
+        function closeNav() {
+            document.getElementById("myNav").style.height = "0%";
+        }
+    </script>
+
+</body>
 </html>

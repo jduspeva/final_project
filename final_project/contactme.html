@@ -5,17 +5,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page 4 - Contact me</title>
+    <link rel="stylesheet" href="./css/html5reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Page 1 - Index</title>
 </head>
 
 <body>
-
     <header>
         <nav>
             <div class="skip"><a href="#main">Skip to Main Content</a></div>
-            <a href="./index.html">Homepage</a>
-            <a href="./portfolio.html">Portfolio</a>
-            <a href="./contactme.html">Contact me</a>
+            <div class="topNav">
+                <span id="logo">LOGO</span>
+                <span id="burger" onclick="openNav()">&#9776;</span>
+                <div id="myNav" class="overlay">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#x2715;</a>
+                    <div class="overlayContent">
+                        <a href="./index.html">Homepage</a>
+                        <a href="./portfolio.html">Portfolio</a>
+                        <a href="./contactme.html">Contact me</a>
+                    </div>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -25,6 +35,16 @@
         <p>Contact form, mainly for enquiries if I ever decide to make photography my side hustle</p>
         <p>There will be a contact form one day, hopefully</p>
     </main>
+
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.height = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.height = "0%";
+        }
+    </script>
 
 </body>
 

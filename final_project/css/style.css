@@ -98,12 +98,12 @@ body{
   }
 
   /* Temp bordel*/
-  img {
+  /* img {
     display: block;
     max-width: 95%;
     height: auto;
     padding-bottom: 5px;
-  }
+  }*/
 
   h1{
     font-family: "Open Sans", sans-serif;

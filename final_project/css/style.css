@@ -97,64 +97,6 @@ body{
     object-fit: cover;
   }
 
-  /* Temp bordel*/
-  /* img {
-    display: block;
-    max-width: 95%;
-    height: auto;
-    padding-bottom: 5px;
-  }*/
-
-  h1{
-    font-family: "Open Sans", sans-serif;
-    font-weight: 300;
-    font-size: calc(15px + 6.5vw);
-    text-align: center;
-  }
-
-  h2{
-    font-family: "Open Sans", sans-serif;
-    font-weight: 400;
-    font-size: 30pt;
-    text-align: center;
-  }
-
-  a, p{
-    font-family: "Open Sans", sans-serif;
-  }
-
-  p{
-    text-align: justify;
-  }
-
-  .topNav{
-    position: fixed;
-    background-color: rgb(15,15,15);
-    width: 100%;
-    top: 0px;
-    right: 0px;
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 70px;
-    font-size: 46px;
-    margin-bottom: 36px;
-  }
-
-  #burger{
-    grid-column: 3/3;
-    text-align: center;
-    align-self: center;
-    color: oldlace;
-  }
-
-  #logo{
-    grid-column: 1/1;
-    text-align: center;
-    align-self: center;
-    color: oldlace;
-    padding: 10px;
-  }
-
   /* Portfolio grid */
 
   /* Architecture */  
@@ -255,4 +197,60 @@ body{
     grid-row: 1 / 1;
   }
 
-  
+  /* Temp bordel*/
+  img {
+    display: block;
+    max-width: 95%;
+    height: auto;
+    padding-bottom: 5px;
+  }
+
+  h1{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-size: calc(15px + 6.5vw);
+    text-align: center;
+  }
+
+  h2{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 30pt;
+    text-align: center;
+  }
+
+  a, p{
+    font-family: "Open Sans", sans-serif;
+  }
+
+  p{
+    text-align: justify;
+  }
+
+  .topNav{
+    position: fixed;
+    background-color: rgb(15,15,15);
+    width: 100%;
+    top: 0px;
+    right: 0px;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 70px;
+    font-size: 46px;
+    margin-bottom: 36px;
+  }
+
+  #burger{
+    grid-column: 3/3;
+    text-align: center;
+    align-self: center;
+    color: oldlace;
+  }
+
+  #logo{
+    grid-column: 1/1;
+    text-align: center;
+    align-self: center;
+    color: oldlace;
+    padding: 10px;
+  }

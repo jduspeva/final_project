@@ -24,7 +24,7 @@ main{
 
 /* Řešení "skip to content" */
 .skip a{
-    background: purple;
+    background: white;
     border: solid rgb(15,15,15);
     left: 0;
     padding: 6px;
@@ -55,8 +55,9 @@ main{
 }
 
 .logo{
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
 }
 
 /* Nav menu */
@@ -66,7 +67,6 @@ main{
   position: fixed;
   top: 60px;
   background-color: var(--black);
-  opacity: 0.95;
   overflow: hidden;
 }
 .menu a{
@@ -137,9 +137,8 @@ main{
 }
 
 .active{
-  color: purple;
+  color: white;
   text-decoration: underline;
-  /*background-color: purple;*/
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -275,7 +274,7 @@ main{
   h1{
     font-family: "Open Sans", sans-serif;
     font-weight: 300;
-    font-size: calc(40px + 4vw);
+    font-size: calc(40px + 2.5vw);
     margin-top: 20px;
     margin-bottom: 20px;
     text-align: center;
@@ -284,7 +283,7 @@ main{
   h2{
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
-    font-size: calc(30px + 3vw);
+    font-size: calc(30px + 1.5vw);
     margin-top: 20px;
     margin-bottom: 20px;
     text-align: center;
@@ -344,6 +343,10 @@ main{
     color: var(--white);
   }
 
+  .text_body{
+    text-align: center;
+  }
+
   /* Form */
   .contact_flex{
     display: flex;
@@ -369,12 +372,21 @@ main{
   .line_input{
     padding:5px;
     margin:5px 0;
-    border:0;
-    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
-    width: 250px;
+    border: 1px black solid;
+    border-radius: 4px;
+    width: 160px;
   }
 
-/* Responsiveness */
+  .submit{
+    width: 172px;
+    height: 40px;
+    border-radius: 4px;
+    color: white;
+    background-color: var(--black);
+    border-width: 0;
+  }
+
+/* Responsiveness v1 ------------------------------------------------------------ */ 
 @media (min-width: 768px) {
   .nav{
       max-height: none;
@@ -413,9 +425,20 @@ main{
   }
 
   .active a{
-    color: grey;
+    color: var(--white);
     text-decoration: underline;
   }
+
+.line_input{
+  width: 250px;
 }
 
-/* kooooozy */
+.submit{
+  width: 262px;
+}
+
+}
+/* Responsiveness v2 ------------------------------------------------------------ */ 
+@media (min-width: 1200px) {
+
+}

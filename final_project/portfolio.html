@@ -8,17 +8,17 @@
     <link rel="stylesheet" href="./css/html5reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/photoswipe.css">
-    <title>Page 1 - Index</title>
+    <title>Portfolio</title>
 </head>
 
 <body>
     <header class="header">
         <!-- Logo 
         <a href="#" class="logo"><img src="./img/crcl.png" alt="loga"></a>-->
-        <img class="logo" src="./img/crcl.png" alt="loga">
+        <img class="logo" src="./img/aperture.png" alt="loga">
         <!-- Hamburger icon -->
         <input class="side-menu" type="checkbox" id="side-menu" />
-        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <label class="hamb" for="side-menu"><span class="hamb-line">Menu</span></label>
         <!-- Menu -->
         <nav class="nav">
             <ul class="menu">
@@ -32,19 +32,7 @@
     <main id="main">
 
         <h1>Portfolio</h1>
-        <p>page 2</p>
-        <p>Portfolio / Gallery page with more images</p>
-        <!--
-        <div>
-            <h2>Architecture</h2>
-            <div id="port_arch">
-                <img id="arch_1" src="./img/arch_4.jpg" alt="Sample Architecture 4">
-                <img id="arch_2" src="./img/arch_5.jpg" alt="Sample Architecture 5">
-                <img id="arch_3" src="./img/arch_6.jpg" alt="Sample Architecture 6">
-                <img id="arch_4" src="./img/arch_7.jpg" alt="Sample Architecture 7">
-            </div>
-        </div>
-        -->
+        <p class="text_body">Showing some of my work.</p>
         <div>
             <h2>Architecture</h2>
             <div id="port_arch">
@@ -65,18 +53,31 @@
         <div>
             <h2>Automotive</h2>
             <div id="port_auto">
-                <img id="auto_1" src="./img/car_6.jpg" alt="Sample Car 6">
-                <img id="auto_2" src="./img/car_7.jpg" alt="Sample Car 6">
-                <img id="auto_3" src="./img/car_8.jpg" alt="Sample Car 6">
+                <a id="auto_1" href="./img/car_6.jpg" data-pswp-width="1333" data-pswp-height="2000" target="_blank">
+                    <img src="./img/car_6.jpg" alt="Sample car_6" />
+                </a>
+                <a id="auto_2" href="./img/car_7.jpg" data-pswp-width="1333" data-pswp-height="2000" target="_blank">
+                    <img src="./img/car_7.jpg" alt="Sample car_7" />
+                </a>
+                <a id="auto_3" href="./img/car_8.jpg" data-pswp-width="2000" data-pswp-height="1333" target="_blank">
+                    <img src="./img/car_8.jpg" alt="Sample car_8" />
+                </a>
+
             </div>
         </div>
         <div>
             <h2>Portraits</h2>
             <div id="port_port">
-                <img id="port_1" src="./img/port_2.jpg" alt="Sample Portrait 2">
-                <img id="port_2" src="./img/port_3.jpg" alt="Sample Portrait 3">
+                <a id="port_1" href="./img/port_2.jpg" data-pswp-width="1333" data-pswp-height="2000" target="_blank">
+                    <img src="./img/port_2.jpg" alt="Sample port_2" />
+                </a>
+                <a id="port_2" href="./img/port_3.jpg" data-pswp-width="2000" data-pswp-height="1333" target="_blank">
+                    <img src="./img/port_3.jpg" alt="Sample port_3" />
+                </a>
             </div>
         </div>
+
+       <!--<script src="./js/script.js"></script>-->
 
         <script type="module">
             import Lightbox from './js/photoswipe-lightbox.esm.js';
@@ -87,12 +88,12 @@
                 pswpModule: PhotoSwipe
             });
             const lightbox2 = new Lightbox({
-                gallery: '#port_arch',
+                gallery: '#port_auto',
                 children: 'a',
                 pswpModule: PhotoSwipe
             });
             const lightbox3 = new Lightbox({
-                gallery: '#port_arch',
+                gallery: '#port_port',
                 children: 'a',
                 pswpModule: PhotoSwipe
             });

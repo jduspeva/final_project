@@ -7,25 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/html5reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/photoswipe.css">
     <title>Page 1 - Index</title>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="skip"><a href="#main">Skip to Main Content</a></div>
-            <div class="topNav">
-                <span id="logo">LOGO</span>
-                <span id="burger" onclick="openNav()">&#9776;</span>
-                <div id="myNav" class="overlay">
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#x2715;</a>
-                    <div class="overlayContent">
-                        <a href="./index.html">Homepage</a>
-                        <a href="./portfolio.html">Portfolio</a>
-                        <a href="./contactme.html">Contact me</a>
-                    </div>
-                </div>
-            </div>
+    <header class="header">
+        <!-- Logo 
+        <a href="#" class="logo"><img src="./img/crcl.png" alt="loga"></a>-->
+        <img class="logo" src="./img/crcl.png" alt="loga">
+        <!-- Hamburger icon -->
+        <input class="side-menu" type="checkbox" id="side-menu" />
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <!-- Menu -->
+        <nav class="nav">
+            <ul class="menu">
+                <li><a href="./index.html">Homepage</a></li>
+                <li class="active"><a href="./portfolio.html">Portfolio</a></li>
+                <li><a href="./contactme.html">Contact me</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -48,10 +48,18 @@
         <div>
             <h2>Architecture</h2>
             <div id="port_arch">
-                <div id="arch_1" ><img src="./img/arch_4.jpg" alt="Sample Architecture 4"></div>
-                <div id="arch_2" ><img src="./img/arch_5.jpg" alt="Sample Architecture 5"></div>
-                <div id="arch_3" ><img src="./img/arch_6.jpg" alt="Sample Architecture 6"></div>
-                <div id="arch_4" ><img src="./img/arch_7.jpg" alt="Sample Architecture 7"></div>
+                <a id="arch_1" href="./img/arch_4.jpg" data-pswp-width="1333" data-pswp-height="2000" target="_blank">
+                    <img src="./img/arch_4.jpg" alt="Sample Architecture 4" />
+                </a>
+                <a id="arch_2" href="./img/arch_5.jpg" data-pswp-width="1333" data-pswp-height="2000" target="_blank">
+                    <img src="./img/arch_5.jpg" alt="Sample Architecture 5" />
+                </a>
+                <a id="arch_3" href="./img/arch_6.jpg" data-pswp-width="1333" data-pswp-height="2000" target="_blank">
+                    <img src="./img/arch_6.jpg" alt="Sample Architecture 5" />
+                </a>
+                <a id="arch_4" href="./img/arch_7.jpg" data-pswp-width="2000" data-pswp-height="1333" target="_blank">
+                    <img src="./img/arch_7.jpg" alt="Sample Architecture 5" />
+                </a>
             </div>
         </div>
         <div>
@@ -69,17 +77,34 @@
                 <img id="port_2" src="./img/port_3.jpg" alt="Sample Portrait 3">
             </div>
         </div>
+
+        <script type="module">
+            import Lightbox from './js/photoswipe-lightbox.esm.js';
+            import PhotoSwipe from './js/photoswipe.esm.js';
+            const lightbox1 = new Lightbox({
+                gallery: '#port_arch',
+                children: 'a',
+                pswpModule: PhotoSwipe
+            });
+            const lightbox2 = new Lightbox({
+                gallery: '#port_arch',
+                children: 'a',
+                pswpModule: PhotoSwipe
+            });
+            const lightbox3 = new Lightbox({
+                gallery: '#port_arch',
+                children: 'a',
+                pswpModule: PhotoSwipe
+            });
+            lightbox1.init();
+            lightbox2.init();
+            lightbox3.init();
+        </script>
     </main>
 
-    <script>
-        function openNav() {
-            document.getElementById("myNav").style.height = "100%";
-        }
-
-        function closeNav() {
-            document.getElementById("myNav").style.height = "0%";
-        }
-    </script>
+    <footer>
+        <p>Copyright © Jan Duspeva</p>
+    </footer>
 
 </body>
 

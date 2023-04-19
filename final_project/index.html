@@ -11,21 +11,21 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="skip"><a href="#main">Skip to Main Content</a></div>
-            <div class="topNav">
-                <span id="logo">LOGO</span>
-                <span id="burger" onclick="openNav()">&#9776;</span>
-                <div id="myNav" class="overlay">
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#x2715;</a>
-                    <div class="overlayContent">
-                        <a href="./index.html">Homepage</a>
-                        <a href="./portfolio.html">Portfolio</a>
-                        <a href="./contactme.html">Contact me</a>
-                    </div>
-                </div>
-            </div>
+    <header class="header">
+        <div class="skip"><a href="#main">Skip to Main Content</a></div>
+        <!-- Logo 
+        <a href="#" class="logo"><img src="./img/crcl.png" alt="loga"></a>-->
+        <img class="logo" src="./img/crcl.png" alt="loga">
+        <!-- Hamburger icon -->
+        <input class="side-menu" type="checkbox" id="side-menu"/>
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <!-- Menu -->
+        <nav class="nav">
+            <ul class="menu">
+                <li class="active" ><a href="./index.html">Homepage</a></li>
+                <li><a href="./portfolio.html">Portfolio</a></li>
+                <li><a href="./contactme.html">Contact me</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -35,11 +35,15 @@
         <p>page 1</p>
         <p>Main page, including about, few sample pictures</p>
         -->
-        <p>Welcome to my personal website! My name is Jan Duspeva, and I am a photographer with a focus on automotive, travel/architecture, 
-        and portrait photography. With a keen eye for detail and a passion for capturing stunning imagery, I specialize in these three areas 
-        to create timeless and impactful images. Whether it's capturing the beauty of a classic car, the grandeur of a cityscape, 
-        or the intimate moments of a portrait session, I strive to bring out the essence of my subjects and tell their unique stories 
-        through my lens. </p>
+        <p>Welcome to my personal website! My name is Jan Duspeva, and I am a photographer with a focus on automotive,
+            travel/architecture,
+            and portrait photography. With a keen eye for detail and a passion for capturing stunning imagery, I
+            specialize in these three areas
+            to create timeless and impactful images. Whether it's capturing the beauty of a classic car, the grandeur of
+            a cityscape,
+            or the intimate moments of a portrait session, I strive to bring out the essence of my subjects and tell
+            their unique stories
+            through my lens. </p>
         <div>
             <h2>Architecture</h2>
             <div id="hp_arch">
@@ -61,10 +65,14 @@
         <div>
             <h2>Portraits</h2>
             <div id="hp_port">
-            <img src="./img/port_1.jpg" alt="Sample Portrait 1" height="300">
-        </div>
+                <img src="./img/port_1.jpg" alt="Sample Portrait 1" height="300">
+            </div>
         </div>
     </main>
+
+    <footer>
+        <p>Copyright © Jan Duspeva</p>
+    </footer>
 
     <script>
         function openNav() {
@@ -77,4 +85,5 @@
     </script>
 
 </body>
+
 </html>

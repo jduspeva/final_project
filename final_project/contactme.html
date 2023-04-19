@@ -7,44 +7,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/html5reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/photoswipe.css">
     <title>Page 1 - Index</title>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="skip"><a href="#main">Skip to Main Content</a></div>
-            <div class="topNav">
-                <span id="logo">LOGO</span>
-                <span id="burger" onclick="openNav()">&#9776;</span>
-                <div id="myNav" class="overlay">
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#x2715;</a>
-                    <div class="overlayContent">
-                        <a href="./index.html">Homepage</a>
-                        <a href="./portfolio.html">Portfolio</a>
-                        <a href="./contactme.html">Contact me</a>
-                    </div>
-                </div>
-            </div>
+    <header class="header">
+        <!-- Logo 
+        <a href="#" class="logo"><img src="./img/crcl.png" alt="loga"></a>-->
+        <img class="logo" src="./img/crcl.png" alt="loga">
+        <!-- Hamburger icon -->
+        <input class="side-menu" type="checkbox" id="side-menu" />
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <!-- Menu -->
+        <nav class="nav">
+            <ul class="menu">
+                <li><a href="./index.html">Homepage</a></li>
+                <li><a href="./portfolio.html">Portfolio</a></li>
+                <li class="active"><a href="./contactme.html">Contact me</a></li>
+            </ul>
         </nav>
     </header>
 
     <main id="main">
         <h1>Contact me</h1>
-        <p>page 3</p>
-        <p>Contact form, mainly for enquiries if I ever decide to make photography my side hustle</p>
-        <p>There will be a contact form one day, hopefully</p>
+        <div class="contact_flex">
+            <div>
+                <p>page 3</p>
+                <p>Contact form, mainly for enquiries if I ever decide to make photography my side hustle</p>
+                <p>There will be a contact form one day, hopefully</p>
+            </div>
+
+            <div class="form">
+                <form action="https://formspree.io/f/mdovglkb" method="post">
+                    <div class="form_insides">
+                        <div>
+                            <label for="name">First Name:</label>
+                        </div>
+                        <div>
+                            <input class="line_input" name="fname" id="fname" type="fname" placeholder="Karel"
+                                required />
+                        </div>
+                        <div>
+                            <label for="lname">Last Name:</label>
+                        </div>
+                        <div>
+                            <input class="line_input" name="lname" id="lname" type="lname" placeholder="Novak"
+                                required />
+                        </div>
+                        <div>
+                            <label for="email">Your Email:</label>
+                        </div>
+                        <div>
+                            <input class="line_input" name="Email" id="email" type="email"
+                                placeholder="karel.n@umich.edu" required />
+                        </div>
+                        <div>
+                            <label for="text">Message:</label>
+                        </div>
+                        <div>
+                            <textarea class="line_input" name="text" id="text" type="text" rows="4" placeholder="Your Message..." required></textarea>
+                        </div>
+                        <div>
+                            <button type="submit">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
     </main>
 
-    <script>
-        function openNav() {
-            document.getElementById("myNav").style.height = "100%";
-        }
-
-        function closeNav() {
-            document.getElementById("myNav").style.height = "0%";
-        }
-    </script>
+    <footer>
+        <p>Copyright © Jan Duspeva</p>
+    </footer>
 
 </body>
 
